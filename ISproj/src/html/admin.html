@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обучение</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header_logo"></div>
+        <div class="header_user"></div>
+    </header>
+    <main class="admin_main">
+        <ul class="admin_list list">
+            <li class="list_item admin_type">Внешний вид
+                <ul class="list">
+                    <li class="list_item admin_page">Форма регистрации</li>
+                    <li class="list_item admin_page">Форма входа</li>
+                    <li class="list_item admin_page">Заголовок</li>
+                    <li class="list_item admin_page">Опросник</li>
+                </ul>
+            </li>
+            <li class="list_item admin_type">Вопросы
+                <ul class="list">
+                    <li class="list_item admin_position">Продажи</li>
+                    <li class="list_item admin_position">Бухгалтерия</li>
+                    <li class="list_item admin_position">Тех.поддержка</li>
+                </ul>
+            </li>
+            <li class="list_item admin_type">Пользователи</li>
+        </ul>
+        <!-- /.admin_list -->
+        <div class="admin_content">
+            <div class="admin_regForm">
+                <div class="form_fields hidden">Количество полей: 
+                    <select name="form_fields_number" id="fields">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <div class="form_fields field_text">Текст полей: 
+                    <input type="text" class="form_field user_name">
+                    <input type="text" class="form_field user_lastname">
+                    <input type="text" class="form_field user_work">
+                    <input type="password" class="form_field user_password">
+                </div>
+                <div class="form_fields form_btn">Кнопка:
+                    <div class="form_btn_color">Цвет: <input type="color" name="btn_color" id="color" class="form_field form_btn_color"></div>
+                    <div class="form_btn_text">Текст: <input type="text" name="btn_text" id="btn_text" class="form_field form_btn_text"></div>
+                </div>
+            </div>
+        </div>
+        <!-- /.admin_content -->
+    </main>
+    <footer class="footer">
+        <div class="links">
+            <a href="../index.html" class="link">Главная</a>
+            <a href="instruction.html" class="link">Инструкции</a>
+            <a href="quiz.html" class="link">Опросник</a>
+        </div>
+    </footer>
+    <!-- /.footer -->
+</body>
+</html>

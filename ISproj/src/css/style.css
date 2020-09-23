@@ -1,0 +1,233 @@
+.header {
+  width: 100%;
+  height: 100px;
+  background: #7C1F7C;
+  margin-bottom: 20px;
+}
+
+.main_entrance {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.main_enter, .main_register {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main_form {
+  width: 500px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.main_enter {
+  margin-left: 100px;
+  margin-right: 130px;
+  -webkit-transition: ease 0.6s;
+  -o-transition: ease 0.6s;
+  transition: ease 0.6s;
+}
+
+.main_toEnter {
+  display: inline-block;
+  margin-bottom: 20px;
+  text-decoration: underline;
+  -webkit-align-self: flex-start;
+      -ms-flex-item-align: start;
+          align-self: flex-start;
+  padding-left: 110px;
+}
+
+.main_toEnter:hover {
+  cursor: pointer;
+}
+
+.input {
+  width: 250px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #D25FD2;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  outline: none;
+}
+
+.btn {
+  width: 250px;
+  padding: 10px;
+  background-color: #FFF273;
+  border: none;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.admin_main {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.admin_list {
+  -webkit-flex-basis: 20%;
+      -ms-flex-preferred-size: 20%;
+          flex-basis: 20%;
+  border: 1px solid #7C1F7C;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  margin-left: 20px;
+}
+
+.admin_content {
+  -webkit-flex-basis: 80%;
+      -ms-flex-preferred-size: 80%;
+          flex-basis: 80%;
+}
+
+.admin_regForm {
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid #7C1F7C;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+}
+
+.form_fields {
+  width: 100%;
+  padding: 10px;
+}
+
+.form_field {
+  margin: 10px 0;
+  padding: 5px;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  outline: none;
+}
+
+.field_text {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+}
+
+.list {
+  list-style: none;
+}
+
+.list_item {
+  padding: 20px;
+}
+
+.list_item:hover {
+  cursor: pointer;
+}
+
+.main_instr {
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid #7C1F7C;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  text-align: center;
+}
+
+.quiz_wrapper {
+  width: 40%;
+  margin: 0 auto;
+  border: 1px solid #7C1F7C;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  padding: 20px;
+}
+
+.quiz_card {
+  text-align: center;
+}
+
+.quiz_btns {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.quiz_btn {
+  width: auto;
+  text-decoration: none;
+  color: black;
+  margin-top: 20px;
+}
+
+.quiz_variant {
+  margin: 10px 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  font-size: 18px;
+}
+
+h1, h2 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 22px;
+}
