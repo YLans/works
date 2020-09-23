@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Cars</title>
+</head>
+<body>
+    <div id="app">
+        <header class="header">
+            <div class="header_container container">
+                <h1 class="header_title">Cars application</h1>
+                <label for="searchCar">Find your car</label><br>
+                <input v-model="inputValue" class="header_input" type="text" id="searchCar" placeholder="Name, model..">
+            </div>
+        </header>
+        <main class="main">
+            <div class="main_container container">
+                <ul class="main_list">
+                    <li v-for="(car, index) in filteredCars" @click="selectCar(index)" :class="{'active': selectedCarIndex === index}" class="main_list_item">{{car.name}} {{car.model}}</li>
+                </ul>
+                <div class="main_result">
+                    <div class="main_result_car">
+                        <h2 class="main_result_title">{{car.name}}</h2>
+                        <img class="main_result_img" :src="car.img" :alt="car.name">
+                    </div>
+                    <div class="main_result_details">
+                        <h2 class="main_result_title">Car details</h2>
+                        <ul class="main_result_details_list">
+                            <li class="main_result_details_list_item"><b>Model: </b> {{car.model}}</li>
+                            <li class="main_result_details_list_item"><b>Year: </b>{{car.year}}</li>
+                            <li class="main_result_details_list_item"><b>Owner: </b> {{car.owner}}</li>
+                        </ul>
+                        <div class="main_result_details_phone">
+                            <transition name="phone">
+                                <p v-if="phoneShowed">{{car.ownerPhone}}</p>
+                            </transition>
+                        </div>
+                        <button @click="phoneShowed = !phoneShowed" v-text="phoneBtnText" class="btn main_btn_call"></button>
+                        <button @click="modalShowed = true" class="btn main_btn_buy">Buy</button>
+                    </div>
+                </div>
+            </div>             
+        </main>
+        <div v-if="modalShowed" class="main_modal">
+            <transition name="modal">
+                <div class="main_modal_container">
+                    <div class="main_modal_upper">
+                        <h2 class="main_modal_title">Confirm your action</h2>
+                        <button @click="modalShowed = false" class="btn main_modal_close">&times;</button>
+                    </div>
+                    <div class="main_modal_info">
+                        <p>Do you want to buy this car?</p><br><br>
+                        <p>{{car.name}}</p><br>
+                        <ul>
+                            <li><b>Model: </b> {{car.model}}</li>
+                            <li><b>Year: </b>{{car.year}}</li>
+                            <li><b>Owner: </b> {{car.owner}}</li>
+                        </ul>
+                    </div>
+                    <div class="main_modal_btns">
+                        <button @click="newOrder" class="btn main_modal_btnY">Buy</button>
+                        <button @click="cancelOrder" class="btn main_modal_btnN">No</button>
+                    </div>
+                </div>
+            </transition>
+        </div>
+        <footer class="footer" v-if="logs.length !== 0">
+            <ul class="footer_logs container">
+                <li v-for="log in logs" :class="{'footer_error': log.type === 'cnl', 'footer_success': log.type === 'ok'}">{{log.text}}, date {{log.date | date}}</li>
+            </ul>
+        </footer>  
+    </div> 
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> 
+    <script src="js/app.js"></script>
+</body>
+</html>
